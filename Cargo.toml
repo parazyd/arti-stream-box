@@ -1,0 +1,18 @@
+[package]
+name = "arti-stream-box"
+version = "0.0.1"
+edition = "2021"
+
+[dependencies]
+async-trait = "0.1.80"
+futures = "0.3.30"
+url = "2.5.0"
+smol = "2.0.0"
+
+arti-client = {version = "0.18.0", default-features = false, features = ["async-std", "compression", "error_detail", "rustls", "accel-sha1-asm", "accel-openssl", "onion-service-client", "onion-service-service"]}
+tor-error = "0.18.0"
+tor-rtcompat = {version = "0.18.0", features = ["async-std", "rustls"]}
+tor-hscrypto = "0.18.0"
+tor-hsservice = "0.18.0"
+tor-proto = "0.18.0"
+tor-cell = "0.18.0"
